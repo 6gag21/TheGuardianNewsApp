@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="7dp"
+        app:cardCornerRadius="18dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@id/img"
+                app:layout_constraintTop_toTopOf="@id/img"
+                android:text="Section"
+                android:textColor="#B2000000"
+                android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:background="@drawable/date_background"
+                android:padding="5dp"/>
+
+            <!--<ImageView-->
+                <!--android:id="@+id/img_bookmark"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/ic_bookmark_border_black_24dp"-->
+                <!--app:layout_constraintEnd_toEndOf="@id/img"-->
+                <!--app:layout_constraintTop_toTopOf="@id/img"-->
+                <!--android:layout_margin="10dp"/>-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/ic_file_download_black_24dp"-->
+                <!--app:layout_constraintEnd_toStartOf="@id/img_bookmark"-->
+                <!--app:layout_constraintTop_toTopOf="@id/img"-->
+                <!--android:layout_margin="10dp"/>-->
+
+            <ImageView
+                android:id="@+id/bottom_shadow"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/shadow"
+                app:layout_constraintBottom_toBottomOf="@id/img"
+                app:layout_constraintStart_toStartOf="@id/img"/>
+
+            <LinearLayout
+                android:id="@+id/ll_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/bottom_shadow"
+                app:layout_constraintBottom_toBottomOf="@id/bottom_shadow"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:padding="3dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_today_black_24dp"
+                    android:layout_gravity="bottom"/>
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="01 July 2019"
+                    android:layout_gravity="bottom"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author"
+                app:layout_constraintTop_toBottomOf="@id/img"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/author"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Title"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</FrameLayout>
